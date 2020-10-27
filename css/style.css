@@ -14,6 +14,7 @@
   --basic-white-07: rgba(255, 255, 255, 0.7);
   --basic-black: #323232;
   --grey-price-text-shadow: rgba(49, 50, 53, 0.5);
+  --grey-menu-border: rgba(50, 50, 50, 0.2);
 
   --form-bgd: #f8f7f4;
   --form-shadow: rgba(0, 0, 0, 0.4);
@@ -45,6 +46,10 @@
   --raspberry-bgd: #9e0031;
   --chocolate-bgd: #4f270e;
   --about-bgd: #f1e9d4;
+
+  --sub-menu-hover-pink: #fbded7;
+  --sub-menu-active-pink: #f6b5a5;
+  --sub-menu-current-brown: #d07058;
 }
 
 /* Global */
@@ -128,6 +133,71 @@ img {
 
 .sub-menu-list {
   display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 143px;
+  position: absolute;
+  box-shadow: 0px 20px 20px var(--form-shadow);
+  z-index: 1;
+}
+
+.nav-link:hover+.sub-menu-list,
+.nav-link:focus+.sub-menu-list,
+.sub-menu-list:hover,
+.sub-menu-list:focus,
+.nav-item:first-child:focus-within .sub-menu-list {
+  display: block;
+}
+
+.sub-menu-link {
+  text-decoration: none;
+  display: block;
+  padding: 14px 20px;
+  background-color: var(--basic-white);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--basic-black);
+}
+
+.sub-menu-link:hover,
+.sub-menu-link:focus {
+  color: var(--basic-black);
+  background-color: var(--sub-menu-hover-pink);
+}
+
+.sub-menu-link:active {
+  color: var(--basic-black);
+  background-color: var(--sub-menu-active-pink);
+}
+
+.sub-menu-link-current {
+  color: var(--basic-white);
+  background-color: var(--sub-menu-current-brown);
+}
+
+.sub-menu-item:first-child .sub-menu-link {
+  border-radius: 4px 4px 0 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  position: relative;
+}
+
+.sub-menu-item:first-child .sub-menu-link::after {
+  content: "";
+  display: block;
+  width: 128px;
+  height: 1px;
+  background-color: var(--grey-menu-border);
+  position: absolute;
+  top: 40px;
+  left: 5px;
+}
+
+.sub-menu-item:last-child .sub-menu-link {
+  border-radius: 0 0 4px 4px;
 }
 
 /* Header -search */
@@ -741,9 +811,9 @@ img {
 
 .footer-academy-text {
   font-weight: normal;
-font-size: 12px;
-line-height: 18px;
-color: var(--basic-white);
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--basic-white);
 }
 
 .footer-academy-link {
