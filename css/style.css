@@ -18,6 +18,7 @@
 
   --form-bgd: #f8f7f4;
   --form-shadow: rgba(0, 0, 0, 0.4);
+  --form-focus-border: rgba(46, 136, 228, 0.52);
 
   --black-btn-active-shadow: rgba(0, 0, 0, 0.07);
 
@@ -250,19 +251,38 @@ img {
   background-color: var(--form-bgd);
   border-radius: 4px;
   box-shadow: 0px 20px 20px var(--form-shadow);
+  z-index: 1;
 }
 
 .search-field {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--basic-black);
   width: 311px;
   height: 44px;
   padding: 15px;
   box-sizing: border-box;
-  color: var(--light-grey-text);
   border: 1px solid var(--light-grey-border);
   border-radius: 4px;
+}
+
+.search-field::placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--light-grey-text);
+}
+
+.search-field:hover {
+  border-width: 2px;
+  padding: 14px;
+}
+
+.search-field:focus {
+  border: 2px solid var(--form-focus-border);
+  padding: 14px;
+  outline: none;
 }
 
 /* Header-login */
@@ -294,13 +314,15 @@ img {
   box-shadow: 0px 20px 20px var(--form-shadow);
   border-radius: 4px;
   position: absolute;
+  z-index: 1;
 }
 
 .login-form-email,
 .login-form-pass {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--basic-black);
   display: block;
   width: 241px;
   height: 44px;
@@ -308,6 +330,27 @@ img {
   padding: 15px;
   box-sizing: border-box;
   border: 1px solid var(--light-grey-border);
+  border-radius: 4px;
+}
+
+.login-form-email:hover,
+.login-form-pass:hover {
+  border-width: 2px;
+  padding: 14px;
+}
+
+.login-form-email:focus,
+.login-form-pass:focus {
+  border: 2px solid var(--form-focus-border);
+  padding: 14px;
+  outline: none;
+}
+
+.login-form-email::placeholder,
+.login-form-pass::placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
   color: var(--light-grey-text);
 }
 
@@ -393,6 +436,7 @@ img {
   border-radius: 4px;
   box-shadow: 0px 20px 20px var(--form-shadow);
   position: absolute;
+  z-index: 1;
 }
 
 .cart-table-cell:first-child {
@@ -1297,7 +1341,8 @@ img {
 }
 
 .page-disabled {
-  opacity: 0.2;;
+  opacity: 0.2;
+  ;
 }
 
 .page-link-active {
