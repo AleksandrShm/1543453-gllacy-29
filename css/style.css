@@ -16,6 +16,7 @@
   --basic-black: #323232;
   --grey-price-text-shadow: rgba(49, 50, 53, 0.5);
   --grey-menu-border: rgba(50, 50, 50, 0.2);
+  --black-overlay-bgd-03: rgba(0, 0, 0, 0.3);
 
   --form-bgd: #f8f7f4;
   --form-shadow: rgba(0, 0, 0, 0.4);
@@ -499,7 +500,7 @@ img {
   color: var(--basic-white);
   border: none;
   border-radius: 26px;
-  background: linear-gradient(180deg, var(--light-red) 0%, var(--dark-red) 100%);
+  background: linear-gradient(180deg, var(--light-red), var(--dark-red));
   box-shadow: 0px 1px 2px var(--red-shadow-btn);
 }
 
@@ -792,6 +793,7 @@ img {
 
 .slide-current {
   display: flex;
+  animation: showslider 0.7s;
 }
 
 .slider-list {
@@ -820,20 +822,20 @@ img {
   display: inline-block;
   vertical-align: middle;
   color: var(--basic-white);
-  background: linear-gradient(180deg, var(--light-red) 0%, var(--dark-red) 100%);
+  background: linear-gradient(180deg, var(--light-red), var(--dark-red));
   text-shadow: 0px 2px 5px var(--brown-text-shadow);
 }
 
 .button:hover,
 .button:focus {
   background: linear-gradient(0deg, var(--basic-white-02), var(--basic-white-02)),
-    linear-gradient(180deg, var(--light-red) 0%, var(--dark-red) 100%);
+    linear-gradient(180deg, var(--light-red), var(--dark-red));
   box-shadow: 0px 2px 2px var(--light-red-shadow-btn-hover);
 }
 
 .button:active {
   background: linear-gradient(0deg, var(--black-btn-active-shadow), var(--black-btn-active-shadow)),
-    linear-gradient(180deg, var(--light-red) 0%, var(--dark-red) 100%);
+    linear-gradient(180deg, var(--light-red), var(--dark-red));
   box-shadow: inset 0px 2px 2px var(--light-red-shadow-btn-active);
 }
 
@@ -932,20 +934,20 @@ img {
   display: inline-block;
   vertical-align: middle;
   color: var(--basic-white);
-  background: linear-gradient(180deg, var(--light-red) 0%, var(--dark-red) 100%);
+  background: linear-gradient(180deg, var(--light-red), var(--dark-red));
   box-shadow: 0px 2px 2px var(--red-shadow-btn-54);
 }
 
 .btn:hover,
 .btn:focus {
   background: linear-gradient(0deg, var(--basic-white-02), var(--basic-white-02)),
-    linear-gradient(180deg, var(--light-red) 0%, var(--dark-red) 100%);
+    linear-gradient(180deg, var(--light-red), var(--dark-red));
   box-shadow: 0px 1px 2px var(--light-red-shadow-btn-hover);
 }
 
 .btn:active {
   background: linear-gradient(0deg, var(--black-btn-active-shadow), var(--black-btn-active-shadow)),
-    linear-gradient(180deg, var(--light-red) 0%, var(--dark-red) 100%);
+    linear-gradient(180deg, var(--light-red), var(--dark-red));
   box-shadow: inset 0px 2px 2px var(--light-red-shadow-btn-active);
 }
 
@@ -1227,19 +1229,19 @@ img {
 
 .mailing-field:hover {
   border-width: 2px;
-  padding: 12px 13px;
+  padding: 13px 13px;
 }
 
 .mailing-field:focus {
   border: 2px solid var(--form-focus-border);
-  padding: 14px;
+  padding: 13px 13px;
   outline: none;
 }
 
 .mailing-field::placeholder {
   font-weight: normal;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 16px;
   color: var(--light-grey-text);
 }
 
@@ -1589,6 +1591,7 @@ img {
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
+  letter-spacing: -0.2px;
   appearance: none;
   display: inline-block;
   vertical-align: middle;
@@ -2070,13 +2073,26 @@ img {
   left: 0;
   top: 0;
   z-index: 10;
-  background-color: transparent;
+  background-color: var(--black-overlay-bgd-03);
   justify-content: center;
   align-items: center;
 }
 
 .overlay-modal-show {
   display: flex;
+}
+
+.modal {
+  display: none;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-feedback-title {
@@ -2095,6 +2111,7 @@ img {
   position: relative;
   border-radius: 6px;
   background-color: var(--form-bgd);
+  z-index: 11;
 }
 
 .feedback-input {
@@ -2152,7 +2169,7 @@ img {
 .feedback-letter::placeholder {
   font-weight: normal;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 16px;
   color: var(--light-grey-text);
 }
 
@@ -2166,7 +2183,7 @@ img {
   color: var(--basic-white);
   border: none;
   border-radius: 26px;
-  background: linear-gradient(180deg, var(--light-red) 0%, var(--dark-red) 100%);
+  background: linear-gradient(180deg, var(--light-red), var(--dark-red));
   box-shadow: 0px 1px 2px var(--red-shadow-btn);
   position: absolute;
   right: 22px;
@@ -2201,4 +2218,56 @@ img {
 
 .modal-close::after {
   transform: rotate(-45deg);
+}
+
+/* Animation */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes showslider {
+  0% {
+    filter: blur(5px) brightness(0.1);
+  }
+
+  100% {
+    filter: blur(0px) brightness(1);
+  }
 }

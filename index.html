@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -70,7 +70,7 @@
                   placeholder="email@example.com">
                 <input class="login-form-pass" type="password" name="header-password" id="header-password-search"
                   placeholder="&bull;&bull;&bull;&bull;&bull;">
-                <input class="login-form-btn" type="submit" value="Войти">
+                <input class="btn login-form-btn" type="submit" value="Войти">
               </form>
               <a href="blank.html" class="login-forget">Забыли пароль?</a>
               <a href="blank.html" class="new-registration">Новая регистрация</a>
@@ -90,7 +90,6 @@
 
       </header>
     </div>
-
 
     <main>
 
@@ -113,7 +112,7 @@
             </li>
           </ul>
           <div class="slider-controls">
-            <button type="button" class="slider-controls-btn current-slider-btn" aria-label="Первый слайд"></button>
+            <button type="button" class="slider-controls-btn current-slider-btn" disabled aria-label="Первый слайд"></button>
             <button type="button" class="slider-controls-btn" aria-label="Второй слайд"></button>
             <button type="button" class="slider-controls-btn" aria-label="Третий слайд"></button>
           </div>
@@ -320,8 +319,6 @@
     </footer>
   </div>
 
-
-
   <div class="overlay-modal-feedback">
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
@@ -341,6 +338,8 @@
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
   </div>
+
+  <script src="js/script.min.js"></script>
 
 </body>
 
