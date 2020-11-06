@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="css/normalize.min.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body-catalog">
@@ -58,6 +58,7 @@
                 fill="white" />
             </svg></a>
           <div class="header-search-hover">
+            <label for="search-field" class="visually-hidden">Форма поиска</label>
             <input class="search-field" type="search" name="search" id="search-field" placeholder="Крем-брюле">
           </div>
         </div>
@@ -66,10 +67,10 @@
           <a href="blank.html" class="header-login-link">Вход</a>
           <div class="header-login-hover">
             <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
-              <input class="login-form-email" type="email" name="header-email" id="header-email-field"
-                placeholder="email@example.com">
-              <input class="login-form-pass" type="password" name="header-password" id="header-password-search"
-                placeholder="&bull;&bull;&bull;&bull;&bull;">
+              <label for="header-email-field" class="visually-hidden">Адрес электронной почты</label>
+              <input class="login-form-email" type="email" name="header-email" id="header-email-field" placeholder="email@example.com">
+              <label for="header-password-field" class="visually-hidden">Введите пароль</label>
+              <input class="login-form-pass" type="password" name="header-password" id="header-password-field" placeholder="&bull;&bull;&bull;&bull;&bull;">
               <input class="btn login-form-btn" type="submit" value="Войти">
             </form>
             <a href="blank.html" class="login-forget">Забыли пароль?</a>
@@ -142,6 +143,7 @@
       <form class="filter" action="https://echo.htmlacademy.ru" method="POST">
         <fieldset class="sort">
           <legend>Сортировка:</legend>
+          <label for="filter-sort-field" class="visually-hidden">Сортировка продуктов</label>
           <select name="filter-sort" id="filter-sort-field" class="filter-sort">
             <option value="sort-by-popularity" class="sort-option">по популярности</option>
             <option value="sort-first-cheap" class="sort-option">сначала недорогие</option>
@@ -342,7 +344,7 @@
           <li class="product-item">
             <h3 class="product-title">
               <a href="blank.html" class="product-link">
-                <span class="product-link-underline">Сливочно-ванильное с кусочками шоколада</span>
+                <span class="product-link-underline">Сливочно-ванильное с&nbsp;кусочками шоколада</span>
               </a>
             </h3>
             <div class="product-highlighter-hover">
@@ -460,7 +462,7 @@
       </li>
     </ul>
     <div class="footer-academy">
-      <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-academy-logo"><img src="img/logo-academy.svg"
+      <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-academy-logo" aria-label="Ссылка на сайт HTML Academy"><img src="img/logo-academy.svg"
           width="108" height="39" alt="HTML Academy"></a>
       <p class="footer-academy-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss"
           class="footer-academy-link"><span class="academy-link-underline">HTML Academy</span></a> &copy; 2020</p>

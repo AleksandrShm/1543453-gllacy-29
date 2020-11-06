@@ -58,6 +58,7 @@
                   fill="white" />
               </svg></a>
             <div class="header-search-hover">
+              <label for="search-field" class="visually-hidden">Форма поиска</label>
               <input class="search-field" type="search" name="search" id="search-field" placeholder="Крем-брюле">
             </div>
           </div>
@@ -66,9 +67,10 @@
             <a href="blank.html" class="header-login-link">Вход</a>
             <div class="header-login-hover">
               <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
-                <input class="login-form-email" type="email" name="header-email" id="header-email-field"
-                  placeholder="email@example.com">
-                <input class="login-form-pass" type="password" name="header-password" id="header-password-search"
+                <label for="header-email-field" class="visually-hidden">Адрес электронной почты</label>
+                <input class="login-form-email" type="email" name="header-email" id="header-email-field" placeholder="email@example.com">
+                <label for="header-password-field" class="visually-hidden">Введите пароль</label>
+                <input class="login-form-pass" type="password" name="header-password" id="header-password-field"
                   placeholder="&bull;&bull;&bull;&bull;&bull;">
                 <input class="btn login-form-btn" type="submit" value="Войти">
               </form>
@@ -133,7 +135,7 @@
         </li>
       </ul>
       <div class="footer-academy">
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-academy-logo"><img src="img/logo-academy.svg"
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-academy-logo" aria-label="Ссылка на сайт HTML Academy"><img src="img/logo-academy.svg"
             width="108" height="39" alt="HTML Academy"></a>
         <p class="footer-academy-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss"
             class="footer-academy-link"><span class="academy-link-underline">HTML Academy</span></a> &copy; 2020</p>

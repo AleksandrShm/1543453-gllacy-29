@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="css/normalize.min.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -58,6 +58,7 @@
                   fill="white" />
               </svg></a>
             <div class="header-search-hover">
+              <label for="search-field" class="visually-hidden">Форма поиска</label>
               <input class="search-field" type="search" name="search" id="search-field" placeholder="Крем-брюле">
             </div>
           </div>
@@ -66,9 +67,11 @@
             <a href="blank.html" class="header-login-link">Вход</a>
             <div class="header-login-hover">
               <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
+                <label for="header-email-field" class="visually-hidden">Адрес электронной почты</label>
                 <input class="login-form-email" type="email" name="header-email" id="header-email-field"
                   placeholder="email@example.com">
-                <input class="login-form-pass" type="password" name="header-password" id="header-password-search"
+                <label for="header-password-field" class="visually-hidden">Введите пароль</label>
+                <input class="login-form-pass" type="password" name="header-password" id="header-password-field"
                   placeholder="&bull;&bull;&bull;&bull;&bull;">
                 <input class="btn login-form-btn" type="submit" value="Войти">
               </form>
@@ -208,21 +211,21 @@
           <h3 class="about-title">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного
             производства на развес</h3>
           <ul class="about-list">
-            <li class="about-item">
+            <li class="about-item about-icon-ice">
               Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования
               и
               проверенных временем технологий.
             </li>
-            <li class="about-item">
+            <li class="about-item about-icon-cow">
               Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас
               связывает долговременное сотрудничество.
             </li>
-            <li class="about-item">
+            <li class="about-item about-icon-leaf">
               Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все
               дополнительные
               ингредиенты и добавки произведены из натурального, экологически чистого сырья.
             </li>
-            <li class="about-item">
+            <li class="about-item about-icon-thermo">
               Доставка нашего мороженого до заказчиков осуществляется в&nbsp;специальном термопаке, который не дает
               мороженому растаять в пути и позволяет сохранить превосходный вкус.
             </li>
@@ -246,6 +249,7 @@
                 вкусного,
                 что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="mailing-form" action="https://echo.htmlacademy.ru" method="POST">
+                <label for="mailing-field" class="visually-hidden">Адрес вашей электронной почты</label>
                 <input type="email" class="mailing-field" placeholder="email@example.com">
                 <input type="submit" class="btn mailing-btn" value="Отправить">
               </form>
@@ -262,11 +266,11 @@
               width="1200" height="430" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
           <div class="contacts-text">
-            <p class="contacts-address">Адрес главного офиса<br>и офлайн-магазина:<br><span class="contacts-bold">ул.
-                Большая Конюшенная,<br>19/8, Санкт-Петербург</span></p>
-            <p class="contacts-phone">Для заказов по телефону:<br><a class="contacts-bold" href="tel:+78124502525">8 812
-                450-25-25</a><br>(с
-              10 до 20 ежедневно)</p>
+            <p class="contacts-address">Адрес главного офиса<br>и офлайн-магазина:</p>
+            <p class="contacts-bold">ул. Большая Конюшенная,<br>19/8, Санкт-Петербург</p>
+            <p class="contacts-phone">Для заказов по телефону:</p>
+            <a class="contacts-bold" href="tel:+78124502525">8 812 450-25-25</a>
+            <p class="contacts-schedule">(с 10 до 20 ежедневно)</p>
             <a href="blank.html" class="btn contacts-feedback-btn">Форма обратной связи</a>
           </div>
         </section>
@@ -310,7 +314,7 @@
         </li>
       </ul>
       <div class="footer-academy">
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-academy-logo"><img src="img/logo-academy.svg"
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-academy-logo" aria-label="Ссылка на сайт HTML Academy"><img src="img/logo-academy.svg"
             width="108" height="39" alt="HTML Academy"></a>
         <p class="footer-academy-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss"
             class="footer-academy-link"><span class="academy-link-underline">HTML Academy</span></a> &copy; 2020</p>
